@@ -6,11 +6,12 @@ export function initializeFirebase() {
   return new Promise((resolve) => {
 
     const firebaseApp = admin.initializeApp({
-      credential: admin.credential.applicationDefault(),
-      databaseURL: 'https://gdgcloud-devfest.firebaseio.com'
+      serviceAccountId: '41962893823@cloudbuild.gserviceaccount.com',
     });
+    console.log("----pass initialisation----");
     firestore = admin.firestore();
     resolve(firebaseApp);
+    console.log("----finish initialisation----");
   });
 }
 
