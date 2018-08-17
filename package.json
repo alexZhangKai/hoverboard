@@ -12,6 +12,7 @@
     "deploy:prod": "cross-env BUILD_ENV=production gulp deploy",
     "firestore:init": "firebase firestore:delete -r --all-collections --token 1/AuggBmmfMTc-QQSMX3WoG8ArpVg3k4Q9wT9AWjiog6AE5Bi_NSHfAVGX28ppaiwr --project gdgcloud-devfest && babel-node ./internals/import-default-data",
     "firestore:copy": "babel-node ./internals/firestore-copy-data",
+    "firestore:test": "babel-node ./internals/firebase-config",
     "postinstall": "bower install",
     "serve": "gulp serve",
     "serve:prod": "cross-env BUILD_ENV=production gulp serve",
