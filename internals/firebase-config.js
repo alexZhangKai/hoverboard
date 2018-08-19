@@ -6,7 +6,8 @@ export function initializeFirebase() {
   return new Promise((resolve) => {
 
     const firebaseApp = admin.initializeApp({
-      credential: admin.credential.applicationDefault()
+      credential: admin.credential.applicationDefault(),
+      databaseURL: 'https://bold-passkey-211103.firebaseio.com'
     });
     firestore = admin.firestore();
     resolve(firebaseApp);
