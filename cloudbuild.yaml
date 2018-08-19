@@ -8,6 +8,8 @@ steps:
 - name: node:8.11.4
   entrypoint: npm
   args: ['run', 'firestore:init']
+  env: 
+    - 'GOOGLE_CLOUD_PROJECT=bold-passkey-211103'
 # - name: node:8.11.4
 #   entrypoint: npm
 #   args: ['run', 'deploy']
