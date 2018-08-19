@@ -6,7 +6,7 @@ export function initializeFirebase() {
   return new Promise((resolve) => {
 
     const firebaseApp = admin.initializeApp({
-      serviceAccountId: '1068100401628@cloudbuild.gserviceaccount.com'
+      credential: admin.credential.applicationDefault()
     });
     firestore = admin.firestore();
     resolve(firebaseApp);
