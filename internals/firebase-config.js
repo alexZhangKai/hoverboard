@@ -4,7 +4,8 @@ import admin from 'firebase-admin';
 let firestore = null;
 export function initializeFirebase() {
   return new Promise((resolve) => {
-    let privatekey = JSON.parse(JSON.stringify(process.env.KEY).split('\\\\').join('\\'));
+    console.log(process.env.AUTH_KEY)
+    let privatekey = JSON.parse(JSON.stringify(process.env.AUTH_KEY).split('\\\\').join('\\'));
     const firebaseApp = admin.initializeApp({
       credential: admin.credential.cert({
         projectId: process.env.PROJECT_ID,
