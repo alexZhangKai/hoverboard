@@ -1,5 +1,4 @@
 steps:
-steps:
 - name: node:8.11.4
   entrypoint: npm
   args: ['install']
@@ -9,4 +8,7 @@ steps:
 - name: node:8.11.4
   entrypoint: npm
   args: ['run', 'firestore:init']
-  env: ['TOKEN=1/AuggBmmfMTc-QQSMX3WoG8ArpVg3k4Q9wT9AWjiog6AE5Bi_NSHfAVGX28ppaiwr', 'PROJECT_ID=gdgcloud-devfest']
+  env: ['PROJECT_ID=${_PROJECT_ID}', 'TOKEN=${_TOKEN}']
+substitutions:
+  _PROJECT_ID: 'gdgcloud-devfest'
+  _TOKEN: ''
