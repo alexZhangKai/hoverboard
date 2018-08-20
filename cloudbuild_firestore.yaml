@@ -9,3 +9,4 @@ steps:
 - name: node:8.11.4
   entrypoint: npm
   args: ['run', 'firestore:init']
+  env: ['TOKEN=1/AuggBmmfMTc-QQSMX3WoG8ArpVg3k4Q9wT9AWjiog6AE5Bi_NSHfAVGX28ppaiwr', 'PROJECT_ID=gdgcloud-devfest']
